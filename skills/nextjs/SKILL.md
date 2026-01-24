@@ -123,7 +123,3 @@ const Heavy = dynamic(() => import('./Heavy'), {
 ❌ Client Componentで直接データベースアクセス
 ❌ 過度なClient Component化（必要な部分のみに限定）
 ❌ 不適切なキャッシング設定
-
-## 詳細リファレンス
-
-より詳細な情報は `.claude/skills/nextjs.md` を参照してください。
