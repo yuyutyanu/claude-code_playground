@@ -21,15 +21,34 @@
 
 ```
 claude-code_playground/
-├── .git/                 # Gitリポジトリデータ
+├── .claude/              # AIアシスタント向け詳細ドキュメント
+│   ├── README.md        # .claudeディレクトリの説明
+│   └── skills/          # 技術スタック別の詳細ガイド
+│       ├── nextjs.md    # Next.js開発ガイド（詳細版）
+│       ├── vitest.md    # Vitestテストガイド（詳細版）
+│       └── biome.md     # Biome設定ガイド（詳細版）
+├── skills/              # Anthropic Skills形式のスキル
+│   ├── skill-creator/   # スキル作成ガイド
+│   │   └── SKILL.md
+│   ├── nextjs/          # Next.js開発スキル
+│   │   └── SKILL.md
+│   ├── vitest/          # Vitestテストスキル
+│   │   └── SKILL.md
+│   └── biome/           # Biomeスキル
+│       └── SKILL.md
+├── .git/                # Gitリポジトリデータ
 ├── README.md            # プロジェクト紹介（日本語）
-└── CLAUDE.md           # このファイル - AIアシスタント用ドキュメント
+└── CLAUDE.md            # このファイル - AIアシスタント用メインドキュメント
 ```
 
-### 主要ファイル
+### 主要ディレクトリとファイル
 
+- **CLAUDE.md**: AIアシスタント向けのメインドキュメント（このファイル）
 - **README.md**: 日本語でのプロジェクト概要（「寝ながらスマホぽちぽちで開発したい所存」）
-- **CLAUDE.md**: AIアシスタント向けのこのドキュメント
+- **.claude/skills/**: 技術スタック別の詳細リファレンスドキュメント（参照用、数百行）
+- **skills/**: Anthropic Agent Skills形式のスキル（簡潔な指示、数十行）
+  - Claude Code、Claude.ai、Claude APIで利用可能
+  - YAML frontmatterとMarkdown本文で構成
 
 ---
 
@@ -158,12 +177,14 @@ git pull origin <branch-name>
 - **Next.js** - Reactベースのフルスタックフレームワーク
   - App Router推奨
   - Server ComponentsとClient Componentsの適切な使い分け
+  - スキル: [skills/nextjs/SKILL.md](skills/nextjs/SKILL.md)
   - 詳細: [.claude/skills/nextjs.md](.claude/skills/nextjs.md)
 
 **テスティング:**
 - **Vitest** - 高速なユニットテスト・統合テストフレームワーク
   - Viteベースの高速実行
   - Jest互換のAPI
+  - スキル: [skills/vitest/SKILL.md](skills/vitest/SKILL.md)
   - 詳細: [.claude/skills/vitest.md](.claude/skills/vitest.md)
 
 **コード品質:**
@@ -171,6 +192,7 @@ git pull origin <branch-name>
   - ESLintとPrettierの代替
   - Rustベースの高速実行
   - 統一されたツールチェーン
+  - スキル: [skills/biome/SKILL.md](skills/biome/SKILL.md)
   - 詳細: [.claude/skills/biome.md](.claude/skills/biome.md)
 
 ### その他のツール
@@ -334,11 +356,21 @@ npm run test:coverage
 ## リソース
 
 ### 内部ドキュメント
-- README.md - プロジェクト概要
+- **README.md** - プロジェクト概要
+- **.claude/skills/** - 技術スタック別の詳細リファレンス（参照用）
+  - nextjs.md - Next.js開発ガイド（約550行）
+  - vitest.md - Vitestテストガイド（約550行）
+  - biome.md - Biome設定ガイド（約550行）
+- **skills/** - Anthropic Agent Skills形式のスキル（実行用）
+  - skill-creator/ - スキル作成ガイド
+  - nextjs/ - Next.js開発スキル
+  - vitest/ - Vitestテストスキル
+  - biome/ - Biomeスキル
 
 ### 外部リソース
 - Git ドキュメント: https://git-scm.com/doc
 - GitHub ガイド: https://guides.github.com
+- Anthropic Agent Skills: https://github.com/anthropics/skills
 
 ---
 
@@ -348,6 +380,9 @@ npm run test:coverage
   - 最小限のリポジトリ構造を文書化
   - Gitワークフロー規約を確立
   - 今後のドキュメント用フレームワークを作成
+  - 技術スタック情報を追加（Next.js、Vitest、Biome）
+  - .claude/skills/配下に詳細ガイドを作成
+  - skills/配下にAnthropicスキルを作成
 
 ---
 
