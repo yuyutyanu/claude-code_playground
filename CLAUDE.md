@@ -21,15 +21,28 @@
 
 ```
 claude-code_playground/
-├── .git/                 # Gitリポジトリデータ
+├── skills/              # Anthropic Agent Skills形式のスキル
+│   ├── skill-creator/   # スキル作成ガイド
+│   │   └── SKILL.md
+│   ├── nextjs/          # Next.js開発スキル
+│   │   └── SKILL.md
+│   ├── vitest/          # Vitestテストスキル
+│   │   └── SKILL.md
+│   └── biome/           # Biomeスキル
+│       └── SKILL.md
+├── .git/                # Gitリポジトリデータ
 ├── README.md            # プロジェクト紹介（日本語）
-└── CLAUDE.md           # このファイル - AIアシスタント用ドキュメント
+└── CLAUDE.md            # このファイル - AIアシスタント用メインドキュメント
 ```
 
-### 主要ファイル
+### 主要ディレクトリとファイル
 
+- **CLAUDE.md**: AIアシスタント向けのメインドキュメント（このファイル）
 - **README.md**: 日本語でのプロジェクト概要（「寝ながらスマホぽちぽちで開発したい所存」）
-- **CLAUDE.md**: AIアシスタント向けのこのドキュメント
+- **skills/**: Anthropic Agent Skills形式のスキル
+  - Claude Code、Claude.ai、Claude APIで利用可能
+  - YAML frontmatterとMarkdown本文で構成
+  - 各スキルに開発ガイドラインを含む
 
 ---
 
@@ -158,20 +171,20 @@ git pull origin <branch-name>
 - **Next.js** - Reactベースのフルスタックフレームワーク
   - App Router推奨
   - Server ComponentsとClient Componentsの適切な使い分け
-  - 詳細: [.claude/skills/nextjs.md](.claude/skills/nextjs.md)
+  - ガイド: [skills/nextjs/SKILL.md](skills/nextjs/SKILL.md)
 
 **テスティング:**
 - **Vitest** - 高速なユニットテスト・統合テストフレームワーク
   - Viteベースの高速実行
   - Jest互換のAPI
-  - 詳細: [.claude/skills/vitest.md](.claude/skills/vitest.md)
+  - ガイド: [skills/vitest/SKILL.md](skills/vitest/SKILL.md)
 
 **コード品質:**
 - **Biome** - 高速なlinterとフォーマッター
   - ESLintとPrettierの代替
   - Rustベースの高速実行
   - 統一されたツールチェーン
-  - 詳細: [.claude/skills/biome.md](.claude/skills/biome.md)
+  - ガイド: [skills/biome/SKILL.md](skills/biome/SKILL.md)
 
 ### その他のツール
 
@@ -265,7 +278,7 @@ npm run test:coverage
 - 重要なユーザーフロー
 - （必要に応じてPlaywright等を追加予定）
 
-詳細なテストガイドラインは [.claude/skills/vitest.md](.claude/skills/vitest.md) を参照してください。
+詳細なテストガイドラインは [skills/vitest/SKILL.md](skills/vitest/SKILL.md) を参照してください。
 
 ---
 
@@ -334,11 +347,17 @@ npm run test:coverage
 ## リソース
 
 ### 内部ドキュメント
-- README.md - プロジェクト概要
+- **README.md** - プロジェクト概要
+- **skills/** - Anthropic Agent Skills形式のスキル
+  - skill-creator/ - スキル作成ガイド
+  - nextjs/ - Next.js開発スキル
+  - vitest/ - Vitestテストスキル
+  - biome/ - Biomeスキル
 
 ### 外部リソース
 - Git ドキュメント: https://git-scm.com/doc
 - GitHub ガイド: https://guides.github.com
+- Anthropic Agent Skills: https://github.com/anthropics/skills
 
 ---
 
@@ -348,6 +367,9 @@ npm run test:coverage
   - 最小限のリポジトリ構造を文書化
   - Gitワークフロー規約を確立
   - 今後のドキュメント用フレームワークを作成
+  - 技術スタック情報を追加（Next.js、Vitest、Biome）
+  - Anthropic Agent Skills形式のスキルを作成
+  - .claude/ディレクトリを削除し、skills/に統一
 
 ---
 
