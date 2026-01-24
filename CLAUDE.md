@@ -152,14 +152,34 @@ git pull origin <branch-name>
 
 ## 技術スタック
 
-**現在:** 未確立
+### コアテクノロジー
 
-**プロジェクトの成長に応じて文書化予定:**
-- プログラミング言語
-- フレームワークとライブラリ
-- ビルドツール
-- テストフレームワーク
-- デプロイ先
+**フロントエンドフレームワーク:**
+- **Next.js** - Reactベースのフルスタックフレームワーク
+  - App Router推奨
+  - Server ComponentsとClient Componentsの適切な使い分け
+  - 詳細: [.claude/skills/nextjs.md](.claude/skills/nextjs.md)
+
+**テスティング:**
+- **Vitest** - 高速なユニットテスト・統合テストフレームワーク
+  - Viteベースの高速実行
+  - Jest互換のAPI
+  - 詳細: [.claude/skills/vitest.md](.claude/skills/vitest.md)
+
+**コード品質:**
+- **Biome** - 高速なlinterとフォーマッター
+  - ESLintとPrettierの代替
+  - Rustベースの高速実行
+  - 統一されたツールチェーン
+  - 詳細: [.claude/skills/biome.md](.claude/skills/biome.md)
+
+### その他のツール
+
+**今後追加予定:**
+- 状態管理ライブラリ（必要に応じて）
+- UIコンポーネントライブラリ
+- データフェッチングライブラリ
+- デプロイ先（Vercel、Cloudflare等）
 
 ---
 
@@ -167,7 +187,8 @@ git pull origin <branch-name>
 
 ### 前提条件
 
-プロジェクト要件が明らかになり次第、文書化予定。
+- **Node.js**: v18以上推奨
+- **パッケージマネージャー**: npm、pnpm、またはyarn
 
 ### セットアップ
 
@@ -176,22 +197,75 @@ git pull origin <branch-name>
 git clone <repository-url>
 cd claude-code_playground
 
+# 依存関係のインストール
+npm install
+# または
+pnpm install
+
 # フィーチャーブランチの作成
 git checkout -b claude/your-feature-$(date +%s)
 
-# （必要に応じて追加のセットアップ手順を追加）
+# 開発サーバーの起動
+npm run dev
+```
+
+### 主要なコマンド
+
+```bash
+# 開発サーバーの起動
+npm run dev
+
+# ビルド
+npm run build
+
+# テストの実行
+npm run test
+
+# Biomeによるlintとフォーマット
+npm run lint
+npm run format
+
+# 型チェック
+npm run type-check
 ```
 
 ---
 
 ## テスト
 
-テスト戦略はコードベースの成長に応じて確立予定。
+### テストフレームワーク: Vitest
 
-推奨アプローチ:
-- ビジネスロジックのユニットテスト
-- APIエンドポイントの統合テスト
-- 重要なユーザーフローのE2Eテスト
+このプロジェクトではVitestを使用してテストを実行します。
+
+**テスト実行:**
+```bash
+# すべてのテストを実行
+npm run test
+
+# ウォッチモードで実行
+npm run test:watch
+
+# カバレッジレポート生成
+npm run test:coverage
+```
+
+### テスト戦略
+
+**ユニットテスト:**
+- ビジネスロジック、ユーティリティ関数
+- Reactコンポーネント（React Testing Library使用）
+- カスタムフック
+
+**統合テスト:**
+- APIルート（Next.js Route Handlers）
+- データフェッチング処理
+- Server Actions
+
+**E2Eテスト:**
+- 重要なユーザーフロー
+- （必要に応じてPlaywright等を追加予定）
+
+詳細なテストガイドラインは [.claude/skills/vitest.md](.claude/skills/vitest.md) を参照してください。
 
 ---
 
