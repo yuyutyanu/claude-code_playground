@@ -1,2 +1,2 @@
-# claude-code_playground
-寝ながらスマホぽちぽちで開発したい所存
+# claude-code-assets
+claude code設定集
