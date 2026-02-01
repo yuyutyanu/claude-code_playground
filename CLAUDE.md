@@ -21,15 +21,27 @@
 
 ```
 claude-code_playground/
-├── skills/              # Anthropic Agent Skills形式のスキル
-│   ├── skill-creator/   # スキル作成ガイド
-│   │   └── SKILL.md
-│   ├── nextjs/          # Next.js開発スキル
-│   │   └── SKILL.md
-│   ├── vitest/          # Vitestテストスキル
-│   │   └── SKILL.md
-│   └── biome/           # Biomeスキル
-│       └── SKILL.md
+├── skills/                        # Anthropic Agent Skills形式のスキル
+│   ├── skill-creator/             # スキル作成ガイド
+│   ├── nextjs/                    # Next.js開発スキル
+│   ├── vitest/                    # Vitestテストスキル
+│   ├── biome/                     # Biomeスキル
+│   ├── tdd-workflow/              # TDD開発ワークフロー
+│   ├── verification-loop/         # 品質検証ループ
+│   ├── security-review/           # セキュリティレビュー
+│   ├── coding-standards/          # コーディング規約
+│   ├── frontend-patterns/         # フロントエンドパターン
+│   ├── backend-patterns/          # バックエンドパターン
+│   ├── git-workflow/              # Gitワークフロー
+│   ├── typescript-patterns/       # TypeScript型パターン
+│   ├── api-design/                # API設計
+│   ├── error-handling/            # エラーハンドリング
+│   ├── performance-optimization/  # パフォーマンス最適化
+│   ├── docker-patterns/           # Docker/コンテナパターン
+│   ├── postgres-patterns/         # PostgreSQLパターン
+│   ├── prisma-patterns/           # Prisma ORMパターン
+│   ├── state-management/          # React状態管理
+│   └── testing-patterns/          # テスト設計パターン
 ├── .git/                # Gitリポジトリデータ
 ├── README.md            # プロジェクト紹介（日本語）
 └── CLAUDE.md            # このファイル - AIアシスタント用メインドキュメント
@@ -353,6 +365,22 @@ npm run test:coverage
   - nextjs/ - Next.js開発スキル
   - vitest/ - Vitestテストスキル
   - biome/ - Biomeスキル
+  - tdd-workflow/ - TDD開発ワークフロー
+  - verification-loop/ - 品質検証ループ
+  - security-review/ - セキュリティレビュー
+  - coding-standards/ - コーディング規約
+  - frontend-patterns/ - フロントエンドパターン
+  - backend-patterns/ - バックエンドパターン
+  - git-workflow/ - Gitワークフロー
+  - typescript-patterns/ - TypeScript型パターン
+  - api-design/ - API設計
+  - error-handling/ - エラーハンドリング
+  - performance-optimization/ - パフォーマンス最適化
+  - docker-patterns/ - Docker/コンテナパターン
+  - postgres-patterns/ - PostgreSQLパターン
+  - prisma-patterns/ - Prisma ORMパターン
+  - state-management/ - React状態管理
+  - testing-patterns/ - テスト設計パターン
 
 ### 外部リソース
 - Git ドキュメント: https://git-scm.com/doc
