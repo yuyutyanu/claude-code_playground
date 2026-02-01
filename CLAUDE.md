@@ -42,7 +42,12 @@ claude-code_playground/
 │   ├── prisma-patterns/           # Prisma ORMパターン
 │   ├── state-management/          # React状態管理
 │   ├── testing-patterns/          # テスト設計パターン
-│   └── jest/                      # Jestテストスキル
+│   ├── jest/                      # Jestテストスキル
+│   ├── java/                      # Javaコーディング規約
+│   ├── springboot/                # Spring Bootパターン
+│   ├── springboot-testing/        # Spring Bootテスト
+│   ├── springboot-security/       # Spring Bootセキュリティ
+│   └── jpa-patterns/              # JPA/Hibernateパターン
 ├── .git/                # Gitリポジトリデータ
 ├── README.md            # プロジェクト紹介（日本語）
 └── CLAUDE.md            # このファイル - AIアシスタント用メインドキュメント
@@ -383,6 +388,11 @@ npm run test:coverage
   - state-management/ - React状態管理
   - testing-patterns/ - テスト設計パターン
   - jest/ - Jestテストスキル
+  - java/ - Javaコーディング規約
+  - springboot/ - Spring Bootパターン
+  - springboot-testing/ - Spring Bootテスト
+  - springboot-security/ - Spring Bootセキュリティ
+  - jpa-patterns/ - JPA/Hibernateパターン
 
 ### 外部リソース
 - Git ドキュメント: https://git-scm.com/doc
